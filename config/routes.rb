@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get '/', to: 'welcome#index'
-
   resources :dogs, only: [:show, :index]
   resources :employees
   root 'welcome#index'

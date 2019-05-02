@@ -1,4 +1,9 @@
+<% if @employee.img_url.include?(".jpg") %>
 <%= image_tag(@employee.img_url) %>
+<% else %>
+<%= "there could be a picture" %>
+<% end %>
+
 <h1><%= @employee.name %></h1>
 <h1><%= @employee.alias %></h1>
 <h1><%= @employee.title %></h1>
