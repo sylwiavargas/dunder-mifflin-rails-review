@@ -1,0 +1,12 @@
+<%= image_tag(@employee.img_url) %>
+<h1><%= @employee.name %></h1>
+<h1><%= @employee.alias %></h1>
+<h1><%= @employee.title %></h1>
+<h1><%= @employee.office %></h1>
+<h1>Dog: <%= link_to @employee.dog.name, dog_path(@employee.dog) %></h1>
+<br>
+<%= link_to "Edit", edit_employee_path(@employee) %>
+<br>
+<%= link_to "Back", employees_path %>
+<br>
+<%= button_to "Fire #{@employee.name}!", @employees_path, method: :delete%>
